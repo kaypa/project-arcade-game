@@ -23,7 +23,6 @@ Enemy.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-// Now write your own player class
 var Player = function(x, y) {
   //Sets location
   this.x = x;
@@ -33,6 +32,10 @@ var Player = function(x, y) {
 };
 // This class requires an update(), render() and
 // a handleInput() method.
+// Draws the player on the screen
+Player.prototype.render = function() {
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
 
 
 // Now instantiate your objects.
