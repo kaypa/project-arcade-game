@@ -16,6 +16,12 @@ Enemy.prototype.update = function(dt) {
   // Ensures the game runs at the same speed for
   // all computers.
   this.x = this.speed * dt;
+
+  // Updates Enemy location
+  if (this.x > 510) {
+    this.x = -50;
+    this.speed = 100 + Math.floor(Math.random() * 200);
+  }
 };
 
 // Draw the enemy on the screen, required method for game
