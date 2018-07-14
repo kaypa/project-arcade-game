@@ -42,8 +42,7 @@ var Player = function(x, y) {
   //Loads image
   this.sprite = 'images/char-horn-girl.png';
 };
-// This class requires an update(), render() and
-// a handleInput() method.
+
 // Draws the player on the screen
 Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -53,6 +52,24 @@ Player.prototype.update = function(dt) {
 
 };
 
+Player.prototype.handleInput = function(allowedKeys) {
+  if (allowedKeys == 'left' && this.x > 0) {
+    this.x -= 101;
+  } else if (allowedKeys == 'right' && this.x < 505) {
+    this.x += 101;
+  } else if (allowedKeys == 'up' && this.y > 0) {
+    this.y -= 83;
+  } else if (allowedKeys == 'down' && this.y < 405) {
+    this.y += 83;
+  }
+
+  if (this.y < 0) {
+    setTimeout(function() {
+      player.x = 202;
+      player.y = 405;
+    }, 700);
+  }
+}
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
