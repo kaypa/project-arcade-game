@@ -79,7 +79,7 @@ var enemyLocation = [63, 147, 230];
 // Create new enemy objects and place them in allEnemies array
 for (var ycord of enemyLocation) {
   enemy = new Enemy(0, ycord, 200);
-  enemyLocation.push(enemy);
+  allEnemies.push(enemy);
 }
 
 var player = new Player(202, 405);
