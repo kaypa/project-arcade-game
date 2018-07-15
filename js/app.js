@@ -67,8 +67,9 @@ Player.prototype.handleInput = function(allowedKeys) {
     swal('Congratulations!', 'You out ran the enemies!');
 
     setTimeout(function() {
-      player.x = 202;
-      player.y = 405;
+      const self = this;
+      self.x = 202;
+      self.y = 405;
     }, 700);
   }
 }
