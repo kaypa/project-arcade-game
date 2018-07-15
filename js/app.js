@@ -1,10 +1,10 @@
 // Enemies our player must avoid
-var Enemy = function(x, y, speed) {
+var Enemy = function(x, y) {
   //Sets location
   this.x = x;
   this.y = y;
   //Sets speed
-  this.speed = speed;
+  this.speed = 80 + Math.floor(Math.random() * 210);
   // The image/sprite for our enemies, this uses
   // a helper we've provided to easily load images
   this.sprite = 'images/enemy-bug.png';
@@ -80,7 +80,7 @@ var enemyLocation = [63, 147, 230];
 
 // Create new enemy objects and place them in allEnemies array
 for (var ycord of enemyLocation) {
-  enemy = new Enemy(0, ycord, 200);
+  enemy = new Enemy(0, ycord);
   allEnemies.push(enemy);
 }
 
