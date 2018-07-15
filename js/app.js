@@ -15,7 +15,7 @@ var Enemy = function(x, y, speed) {
 Enemy.prototype.update = function(dt) {
   // Ensures the game runs at the same speed for
   // all computers.
-  this.x = this.speed * dt;
+  this.x += this.speed * dt;
 
   // Updates Enemy location
   if (this.x > 510) {
