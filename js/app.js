@@ -55,7 +55,7 @@ Player.prototype.update = function(dt) {
 Player.prototype.handleInput = function(allowedKeys) {
   if (allowedKeys == 'left' && this.x > 0) {
     this.x -= 101;
-  } else if (allowedKeys == 'right' && this.x < 505) {
+  } else if (allowedKeys == 'right' && this.x < 400) {
     this.x += 101;
   } else if (allowedKeys == 'up' && this.y > 0) {
     this.y -= 83;
